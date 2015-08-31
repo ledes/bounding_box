@@ -7,13 +7,13 @@ class BoundingArea
   end
 
   def boxes_contain_point?(x, y)
-    flag = 0
+    flag = false
     @boxes.each do |box|
       if  box.contains_point?(x, y)
-        flag += 1
+        flag = true
       end
     end
-    flag > 0
+    flag
   end
-  
+
 end
